@@ -1,0 +1,31 @@
+
+#chat-container h4{
+  color: #818a91
+}
+
+#messages-list{
+
+  flex-shrink:1;
+  padding: 1em 0.5em 0.5em;
+  border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
+  overflow-y: scroll;
+}
+
+#messages-list .message-data{
+  margin-bottom: 0.5em;
+}
+#messages-list .message-data-time {
+  color: #a8aab1;
+  padding-left: 6px;
+}
+
+#chatbox{
+  width: 100%;
+  border: none;
+}
+#chatbox textarea{
+  margin-bottom:0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

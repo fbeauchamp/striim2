@@ -1,0 +1,96 @@
+<div id="app">
+<section id="main-container">
+<div id="users-container">
+  <h4>
+    <a
+      style="color:white"
+      tabindex="0"
+      class="bd-popover pull-right"
+      role="button"
+      data-toggle="popover"
+      data-placement="bottom"
+      title="protéger ce salon par mot de passe"
+      data-html="true"
+      data-content='
+        <div class="input-group">
+          <input type="password" class="form-control" placeHOlder="Nouveau mot de passe">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button" title="Enregistrer le mot de passe"><i class="fa fa-lock"></i></button>
+          </span>
+        </div>'>
+
+      <i class="fa fa-unlock"></i>
+    </a>
+    <small class="text-muted">Salon</small><br>
+    Nouvelle Zélande
+  </h4>
+
+  <div style="flex:1"></div>
+  <ul class="list-group" style="margin-bottom:0.5em">
+    <user [user]="me" class="list-group-item me"></user>
+  </ul>
+  <div style="flex:1"></div>
+  <h4>
+    <span class="text-muted">Participants</span>
+    <a
+      style="color:white"
+      tabindex="0"
+      class="bd-popover pull-right"
+      role="button"
+      data-toggle="popover"
+      data-placement="right"
+      title="inviter quelqu'un"
+      data-html="true"
+      data-content='Le lien direct vers ce salon est  <b>https://stri.im/Nouvelle%20Zélande</b><br>
+        Envoyer ce lien par mail :<br>
+
+          <div class="input-group">
+            <input type="email" class="form-control" placeHOlder="adresse du destinataire">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button" title="Envoyer"><i class="fa fa-envelope-o"></i></button>
+            </span>
+          </div>'>
+
+      <i class="fa fa-user-plus"></i>
+    </a>
+  </h4>
+
+  <div class="scroller">
+    <other-users [users]="others"></other-users>
+</div>
+
+<div style="flex:1"></div>
+  <h4><span class="text-muted">Partages</span>
+    <a
+      style="color:white"
+      tabindex="0"
+      class="bd-popover pull-right"
+      role="button"
+      data-toggle="popover"
+      data-placement="right"
+      title="partager un document"
+      data-html="true"
+      data-content='<button class="btn btn-primary btn-block btn-sm"><i class="fa fa-dropbox"></i> depuis votre dropbox</button>
+        <button class="btn btn-primary btn-block btn-sm"><i class="fa fa-upload"></i> depuis votre ordinateur</button>
+        <button class="btn btn-primary btn-block btn-sm"><i> A </i> depuis une GED alfresco</button>'>
+
+      <i class="fa fa-plus"></i>
+    </a>
+  </h4>
+
+  <div class="scroller" >
+    <ul class="list-group list-group-flush share-list">
+      <share class="list-group-item" *ng-for="#share of shares" [share]="share"></share>
+    </ul>
+  </div>
+
+</div>
+
+<div id="main-view">
+</div>
+<Chat id="chat-container" [messages]="messages">
+</Chat>
+
+
+</section>
+</div>

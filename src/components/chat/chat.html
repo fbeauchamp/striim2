@@ -1,0 +1,22 @@
+
+
+  <h4>Tout le groupe
+  <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+</h4>
+<div style="flex:1"></div>
+<div class="pod-list" id="messages-list">
+    <chat-message   *ng-for="#message of messages" [message]="message">
+
+    </chat-message>
+</div>
+<div id="chatbox" >
+
+   <textarea
+    type="text"
+    class="form-control"
+    placeholder="Tapez ici votre message ou collez un lien "
+  ></textarea>
+</div>

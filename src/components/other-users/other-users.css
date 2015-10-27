@@ -1,0 +1,16 @@
+
+.btn{
+  margin: 0.5em 0;
+}
+
+.scroller{
+  flex-shrink:1;
+  overflow: auto;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+.list-group-item{
+  color: #444753;
+    padding:0.75em;
+}

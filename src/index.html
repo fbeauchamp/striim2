@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+    <title>angular-2</title>
+  </head>
+  <body>
+
+    <main>Loading...</main>
+
+    <script src="lib/traceur-runtime.js"></script>
+    <script src="lib/system-csp-production.src.js"></script>
+    <script src="lib/Reflect.js"></script>
+
+    <script>
+      System.config({
+        defaultJSExtensions: true,
+        "paths": {
+        "components/*": "components/*.js",
+        "services/*": "services/*.js",
+        "stores/*": "stores/*.js",
+        "*":"*.js"
+        }
+      });
+    </script>
+
+    <script src="lib/angular2.js"></script>
+
+    <script>
+      System.import('index').catch(console.log.bind(console));
+    </script>
+
+  </body>
+</html>
