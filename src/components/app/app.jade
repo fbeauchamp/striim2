@@ -1,0 +1,72 @@
+#app
+  #main-container
+    #users-container
+      h4
+        a(
+          style="color:white",
+          tabindex="0",
+          class="bd-popover pull-right",
+          role="button",
+          data-toggle="popover",
+          data-placement="bottom",
+          title="protéger ce salon par mot de passe",
+          data-html="true",
+          data-content=" "
+          )
+          i.fa.fa-unlock
+        small.text-muted Salon
+        br
+        | Nouvelle Zélande
+      div(style="flex:1")
+      ul.list-group(style="margin-bottom:0.5em")
+        user.list-group-item.me(
+            [user]="me"
+          )
+      div(style="flex:1")
+      h4
+        span.text-muted Participants
+        a(
+          style="color:white"
+          tabindex="0"
+          class="bd-popover pull-right"
+          role="button"
+          data-toggle="popover"
+          data-placement="right"
+          title="inviter quelqu'un"
+          data-html="true"
+          data-content=""
+          )
+          i.fa.fa-user-plus
+      .scroller
+        other-users([users]="others")
+      div(style="flex:1")
+      h4
+        span.text-muted Partages
+        a(
+          style="color:white"
+          tabindex="0"
+          class="bd-popover pull-right"
+          role="button"
+          data-toggle="popover"
+          data-placement="right"
+          title="partager un document"
+          data-html="true"
+          data-content="")
+
+          i.fa.fa-plus
+      .scroller
+        ul.list-group.list-group-flush.share-list
+          share.list-group-item(
+            *ng-for="#share of shares",
+            [share]="share"
+          )
+    #main-view
+      router-outlet
+      // be carefull , component will be created here, and not inside router-outlet
+      //  https://github.com/angular/angular/issues/4679 comment from gdi2290
+
+        
+          
+    chat#chat-container([messages]="messages",
+      (messageposted)="onChange($event)"
+    )

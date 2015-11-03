@@ -1,0 +1,9 @@
+.share-container
+  a(
+    [router-link]="['/Share',{type:share.type,id:share.name}]"
+    )  
+    i([class]="classMap")
+    | {{share.name}}
+  .action.pull-right
+    i.fa.fa-download
+    i.fa.fa-close.text-danger

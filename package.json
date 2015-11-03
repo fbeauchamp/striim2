@@ -1,18 +1,76 @@
 {
-  "name": "striim-2",
+  "private": true,
+  "name": "striiim2",
   "version": "0.0.0",
-  "dependencies": {
-    "angular2": "2.0.0-alpha.36",
-    "reflect-metadata": "0.1.1",
-    "systemjs": "0.18.17"
+  "license": "MIT",
+  "description": "",
+  "keywords": [],
+  "author": {
+    "name": "Florent BEAUCHAMP"
   },
+  "preferGlobal": false,
+  "main": "dist/",
+  "bin": {},
+  "files": [
+    "dist/"
+  ],
   "devDependencies": {
-    "gulp": "3.9.0",
-    "gulp-concat": "2.6.0",
-    "gulp-rename": "1.2.2",
-    "gulp-shell": "0.4.3",
-    "gulp-traceur": "0.17.1",
-    "gulp-webserver": "0.9.1",
-    "main-bower-files": "^2.9.0"
+    "angular2": "^2.0.0-alpha.45",
+    "bootstrap": "github:twbs/bootstrap#v4-dev",
+    "babel-core": "5.8.25",
+   "babel-eslint": "^4.1.1",
+   "babel-plugin-angular2-annotations": "^2.0.0",
+   "babelify": "^6.3.0",
+   "babylon": "5.8.23",
+   "browserify": "^11.0.1",
+    "bundle-collapser": "^1.2.1",
+    "clarify": "^1.0.5",
+    "connect": "^3.4.0",
+    "font-awesome": "^4.4.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csso": "^1.0.1",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.2",
+    "gulp-watch": "^4.3.5",
+    "mocha": "^2.3.3",
+    "must": "^0.13.1",
+    "nice-pipe": "^0.2.2",
+    "readable-stream": "^2.0.3",
+    "reflect-metadata": "^0.1.2",
+    "rimraf": "^2.4.3",
+    "serve-static": "^1.10.0",
+    "source-map-support": "^0.3.2",
+    "standard": "^5.3.1",
+    "trace": "^2.0.0",
+    "vinyl": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "scripts": {
+    "build": "gulp build --production",
+    "dev": "gulp build server",
+    "lint": "standard",
+    "prepublish": "npm run build",
+    "test": "mocha --opts .mocha.opts \"dist/**/*.spec.js\"",
+    "posttest": "npm run lint",
+    "test-dev": "mocha --opts .mocha.opts --watch --reporter=min \"dist/**/*.spec.js\""
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "dist/**"
+    ],
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "zone.js": "^0.5.8"
   }
 }

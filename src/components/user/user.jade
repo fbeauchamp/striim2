@@ -1,0 +1,13 @@
+.user-container
+  .thumb
+    img(
+      src="{{user.picture}}",
+      alt="avatar"
+      )
+  .about
+    .name {{user.name}}
+    .action
+      i.fa.fa-fw.fa-video-camera.text-muted(title="partager ma webcam")
+      i.fa.fa-fw.fa-microphone.text-muted(title="partager mon micro")
+      i.fa.fa-fw.fa-desktop.text-muted(title="partager mon écran")
+      i.fa.fa-fw.fa-sign-out.text-danger(title="quitter la salle")

@@ -1,0 +1,13 @@
+h4
+  | Tout le groupe
+  button.close(type="button" aria-label="Close")
+    span(aria-hidden="true") &times;
+    span.sr-only Fermer
+div(style="flex:1")
+#messages-list
+  chat-message(
+    *ng-for="#message of messages" ,
+    [message]="message"
+  ) 
+#chatbox
+  textarea.form-control(placeholder="Tapez ici votre message ou collez un lien ")

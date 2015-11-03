@@ -1,4 +1,4 @@
-import {ComponentMetadata as Component, ViewMetadata as View} from 'angular2/angular2';
+import { Component,  View} from 'angular2/angular2';
 
 
 @Component({
@@ -10,7 +10,7 @@ import {ComponentMetadata as Component, ViewMetadata as View} from 'angular2/ang
   templateUrl: 'components/user/user.html',
   styleUrls: ['components/user/user.css']
 })
-export class User {
+export default class User {
   constructor() {
     console.log(this)
     console.info('user  Component Mounted Successfully');

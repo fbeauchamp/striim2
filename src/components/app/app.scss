@@ -1,0 +1,80 @@
+/*
+heavily insipired by : http://codepen.io/drehimself/pen/KdXwxR
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+.popover{
+  color:#444753
+}
+
+#app{
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  background: #C5DDEB;font: 14px/20px "Lato", Arial, sans-serif;
+  color: white;
+}
+
+#main-container{
+  flex:1;
+  display:flex;
+}
+#main-view  router-outlet{
+  display:none;
+}
+#main-view > *{
+}
+
+#main-view{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+}
+
+#users-container{
+  background: #444753;
+  width:260px;
+  border-radius: 5px;
+  margin:1em;
+  padding: .5rem;
+  display:flex;
+  flex-direction: column;
+}
+#users-container .list-group-item{
+  padding:0.75em;
+}
+#users-container h4{
+  margin-top:0.25em
+}
+#users-container h4:first-child{
+    margin-top:0
+}
+#users-container h4 i{
+  cursor:pointer;
+  font-size: 75%;
+  margin-top:6px;
+}
+#users-container .scroller{
+  flex-shrink:1;
+  overflow: auto;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+#chat-container{
+  width:260px;
+  background: #F2F5F8;
+  color: #434651;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  margin:10em 1em 0 1em;
+  display:flex;
+  flex-direction:column;
+  flex-grow: end;
+  overflow: auto;
+  height: auto;
+  padding: .5em .5em 0 .5em;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}

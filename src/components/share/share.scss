@@ -1,0 +1,22 @@
+
+.share-container{
+  color:#444753;
+}
+
+.action i{
+  cursor:pointer;
+  margin: 0.4em 0.4em 0 0;
+}
+
+.share-container .action{
+  visibility: hidden;
+}
+
+.share-container:hover .action{
+    visibility: visible;;
+}
+
+.share-container .action i{
+  cursor:pointer;
+  margin: 0.4em 0.4em 0 0;
+}

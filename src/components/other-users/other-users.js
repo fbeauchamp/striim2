@@ -1,5 +1,5 @@
 import {Component, View, NgFor  } from 'angular2/angular2';
-import {User} from 'components/user/user';
+import User from '../user/user';
 
 @Component({
   selector: 'other-users',
@@ -11,7 +11,7 @@ import {User} from 'components/user/user';
   templateUrl: 'components/other-users/other-users.html',
   styleUrls: ['components/other-users/other-users.css']
 })
-export class OtherUsers {
+export default class OtherUsers {
   constructor() {
     console.info('other users  Component Mounted Successfully');
   }

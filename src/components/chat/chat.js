@@ -1,9 +1,10 @@
-import {ComponentMetadata as Component, ViewMetadata as View,NgFor,NgStyle} from 'angular2/angular2';
+import {Component,  View,Attribute , NgFor,NgStyle,EventEmitter} from 'angular2/angular2';
 
-import {ChatMessage} from 'components/chat-message/chat-message';
+import ChatMessage from '../chat-message/chat-message';
 @Component({
   selector: 'chat',
-  properties:['messages']
+  inputs:['messages'],
+  events: ['messageposted']
 })
 
 @View({
@@ -11,9 +12,19 @@ import {ChatMessage} from 'components/chat-message/chat-message';
   templateUrl: 'components/chat/chat.html',
   styleUrls: ['components/chat/chat.css']
 })
-export class Chat {
-  constructor() {
+export default class Chat {
+  message;
+  messageposted;
+  constructor( ) {
+    this.messageposted = new EventEmitter();
     console.info('CHAT Component Mounted Successfully');
-    console.log(this)
   }
+  onInit() {
+    setTimeout(()=>{
+      console.log(' post ')
+      this.messageposted.next('toto','tata')
+    },2000)
+
+  }
+
 }

@@ -1,0 +1,44 @@
+ .message-data{
+  margin-bottom: 0.5em;
+}
+.message-data-time {
+  color: #a8aab1;
+  padding-left: 6px;
+  float:right; 
+}
+.message-data-name {
+  float:left;
+}
+.message{
+  color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  width: 90%;
+  position: relative;
+  text-align: justify;
+
+}
+ .message:after {
+  bottom: 100%;
+  left: 10%;
+  content: "";
+  /*border trick from https://css-tricks.com/speech-bubble-arrows-that-inherit-parent-color/*/
+   position: absolute;
+   border-bottom: 10px solid black;
+   border-bottom-color: inherit;
+   border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+}
+.other-message.message:after{
+  /*border-bottom-color: #94C2ED;*/
+  left: 80%;
+}
+
+.other-message .message-data-time{
+  float:left
+}
+
+.other-message .message-data-name {
+  float:right;
+}

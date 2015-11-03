@@ -1,0 +1,12 @@
+.message-data.clearfix(
+  [class.other-message]="!message.mine"
+)
+  span.message-data-time {{message.at}}
+  span.message-data-name {{message.from}}
+.message.clearfix(
+  [class.other-message]="!message.mine",
+  [class.pull-left]="message.mine",
+  [class.pull-right]="!message.mine",
+  [ng-style]="{'background-color':message.color,'border-bottom-color':message.color}"
+  )
+  | {{message.text}}
