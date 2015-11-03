@@ -12,8 +12,6 @@ import { Component,  View} from 'angular2/angular2';
 })
 export default class User {
   constructor() {
-    console.log(this)
-    console.info('user  Component Mounted Successfully');
 
   }
 

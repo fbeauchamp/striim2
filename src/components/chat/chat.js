@@ -19,12 +19,17 @@ export default class Chat {
     this.messageposted = new EventEmitter();
     console.info('CHAT Component Mounted Successfully');
   }
-  onInit() {
-    setTimeout(()=>{
-      console.log(' post ')
-      this.messageposted.next('toto','tata')
-    },2000)
-
+  doneTyping($event){
+    if($event.which === 13) {
+      console.log('ENTER ',$event.target.value)
+      this.messageposted.next({
+        color: 'red',
+        at: new Date(),
+        text: $event.target.value,
+        mine: Math.random() < 0.5
+      })
+      $event.target.value = null;
+    }
   }
 
 }

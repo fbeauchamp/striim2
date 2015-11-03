@@ -28,7 +28,8 @@ export default class App {
     this.me = UsersStore.getInstance().me
     this.others = UsersStore.getInstance().others
   }
-  onChange(event) {
+  postMessage(event) {
+    MessageStore.getInstance().add(event);
           console.log('CHANGED',event);
       }
 }

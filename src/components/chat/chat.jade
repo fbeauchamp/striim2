@@ -10,4 +10,8 @@ div(style="flex:1")
     [message]="message"
   ) 
 #chatbox
-  textarea.form-control(placeholder="Tapez ici votre message ou collez un lien ")
+  textarea.form-control(
+    placeholder="Tapez ici votre message ou collez un lien ",
+    (keyup)="doneTyping($event)"
+    
+  )

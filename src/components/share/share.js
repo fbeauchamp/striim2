@@ -13,11 +13,9 @@ import {RouterLink} from 'angular2/router';
 })
 export default class Share {
   constructor() {
-    console.info('share  Component Mounted Successfully');
   }
   onInit() {
-    console.log(this)
-    this.classMap='fa fa-fw '+this.share.icon 
+    this.classMap='fa fa-fw '+this.share.icon
   }
 
 }
